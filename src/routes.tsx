@@ -7,8 +7,6 @@ import UserDetails from './pages/UserDetails';
 const ManyUserLists = () => (
   <>
     <UserList />
-    <UserList />
-    <UserList />
   </>
 );
 

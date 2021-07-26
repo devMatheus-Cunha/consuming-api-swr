@@ -13,18 +13,18 @@ const UserList: React.FC = () => {
   const { data, mutate } = useFetch<User[]>('users');
 
   const handleNameChange = useCallback((id: number) => {
-    api.put(`users/${id}`, { name: 'Bartolomeu' });
+    api.put(`users/${id}`, { name: 'Teuzin' });
 
     const updatedUsers = data?.map(user => {
       if (user.id === id) {
-        return { ...user, name: 'Bartolomeu' }
+        return { ...user, name: 'Teuzin' }
       }
 
       return user;
     })
 
     mutate(updatedUsers, false)
-    mutateGlobal(`users/${id}`, { id, name: 'Bartolomeu' })
+    mutateGlobal(`users/${id}`, { id, name: 'Teuzin' })
   }, [data, mutate]);
 
   if (!data) {
